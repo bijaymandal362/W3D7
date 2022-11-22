@@ -1,0 +1,22 @@
+<h2>Add Cookie</h2>
+<form method="post">
+    <label>Key</label>
+    <input type="text" name="key">
+    <label>Value</label>
+    <input type="text" name="value">
+    <input type="submit">
+</form>
+<a href="/clear">Clear All</a>
+<h3>Cookie List</h3>
+<table>
+    <tr>
+        <th>Key</th>
+        <th>Value</th>
+        <% for(const item of list) { %>
+        <tr>
+            <td><%= item.key %></td>
+            <td><%= item.value %></td>
+        </tr>
+      <%  } %>
+    </tr>
+</table>
